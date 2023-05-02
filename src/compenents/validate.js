@@ -23,12 +23,12 @@ export const  validate = data => {
         delete errors.password 
     }
 
-    if (!data.confirmpassword){
-        errors.confirmpassword = "Confirm the password"
-    } else if(data.confirmpassword !== data.password){
-        errors.confirmpassword = "Password do not match"
+    if (!data.confirmPassword){
+        errors.confirmPassword = "Confirm the password"
+    } else if(data.confirmPassword !== data.password){
+        errors.confirmPassword = "Password do not match"
     }else{
-        delete errors.confirmpassword
+        delete errors.confirmPassword
     }
 
     if(data.isAccepted){
