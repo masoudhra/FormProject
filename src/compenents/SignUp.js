@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { validate } from './validate';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 import { notify } from './toast';
 import styles from './SignUp.module.css'
 
@@ -19,7 +20,7 @@ const SignUp = () => {
     const [touched, setTouched] = useState({})
 
     useEffect(() => {
-        setErrors(validate(data))
+        setErrors(validate(data, "signup"))
         
     }, [data, touched])
 
@@ -118,7 +119,7 @@ const SignUp = () => {
                     {errors.isAccepted && touched.isAccepted &&<span>{errors.isAccepted}</span>}
                 </div>
                 <div className={styles.formButtons}>
-                    <a href="#">Login</a>
+                    <Link to="/login">Login</Link>
                     <button type="submit">Sign Up</button>
                 </div>
             </form>

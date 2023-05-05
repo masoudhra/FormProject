@@ -110,7 +110,7 @@ input[type="checkbox"]:checked {
 
 input[type="checkbox"]:focus{
     height: 18px;
-    width: 8px;
+    width: 18px;
     outline: none;
     border: 2px solid #004aaa;
 }
