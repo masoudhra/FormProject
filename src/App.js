@@ -1,16 +1,16 @@
 import './App.css';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import SignUp from './compenents/SignUp';
 import Login from './compenents/Login';
 function App() {
   return (
     <div className="App">
-        <Switch>
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={SignUp} />
-          <Redirect from="/" to="/signup" />
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/" element={<Navigate to="/signup" />} />
 
-        </Switch>
+        </Routes>
     </div>
   );
 }
